@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HygiaFrontis</title> <!-- conbinacion de "salud", "cuidados" y "diosa Hygieia" en griego -->
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style-index.css"> <!-- estilo propio del index-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- iconos -->
+    <link rel="stylesheet" href="styles/styles-comun.css"> <!-- estilo gobal-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- fuentes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&display=swap" rel="stylesheet">
+</head>
+<body class="container">
+    <header class="header">
+        <nav class="navegacion" aria-label="Desplaza por las diferentes paginas del sitio"> <!-- seccion de navegacion-->
+            <ul class="navegacion__list"> <!-- ira en la parte superior-->
+                <li class="navegacion__item"><a href="consulta.html" class="navegacion__link">Consulta</a></li>
+                <li class="navegacion__item"><a href="#nosotros" class="navegacion__link">Nosotros</a></li>
+                <li class="navegacion__item"><a class="navegacion__link" href="especialidades.html">Especialidades</a></li>
+            </ul>
+        </nav>
+        <div class="Titulo">
+            <h1 class="titulo__principal">HygiaFrontis</h1> <!--combinacion en griego de "solud" y la diosa "Frontida"-->
+        </div> 
+    </header>
+    <main class="main">
+        <article class="article">
+            <!-- SECCIÓN NOSOTROS (FLEX) -->
+            <section class="nosotros-flex">
+                <div class="nosotros-texto">
+                    <h2 id="nosotros" class="titulos-secundarios">Sobre Nosotros</h2>
+                    <p><strong>Historia:</strong> Fundada en 2020, HygiaFrontis nació con la misión de ofrecer atención médica integral y humana...</p>
+                    <p><strong>Misión:</strong> Brindar servicios de salud accesibles, con calidez y tecnología de vanguardia, promoviendo el bienestar de nuestra comunidad.</p>
+                    <p><strong>Valores:</strong> Empatía, excelencia, innovación y compromiso social.</p>
+                </div>
+                <div class="nosotros-imagen">
+                    <img src="img/equipo-medico.png" alt="Equipo médico de HygiaFrontis">
+                </div>
+            </section>
+        
+            <!-- seccion de servios (GRID) -->
+            <section id="servicios" class="servicios">
+                <h2 class="titulos-secundarios">Nuestros Servicios</h2>
+                <div class="servicios-grid">
+                    <div class="servicio-card">
+                        <img src="img/urgencias.jpg" alt="Urgencias 24h">
+                        <h3>Urgencias 24h</h3>
+                        <p>Atención inmediata las 24 horas, los 365 días del año.</p>
+                    </div>
+                    <div class="servicio-card">
+                        <img src="img/laboratorio.jpg" alt="Laboratorio clínico">
+                        <h3>Laboratorio Clínico</h3>
+                        <p>Análisis clínicos con equipos de última generación.</p>
+                    </div>
+                    <div class="servicio-card">
+                        <img src="img/rayosx.jpg" alt="Rayos X">
+                        <h3>Rayos X</h3>
+                        <p>Estudios de imagenología con reporte inmediato.</p>
+                    </div>
+                    <div class="servicio-card">
+                        <img src="img/cardiologia.jpg" alt="Cardiología">
+                        <h3>Cardiología</h3>
+                        <p>Especialistas en prevención y tratamiento cardiovascular.</p>
+                    </div>
+                    <div class="servicio-card">
+                        <img src="img/pediatria.jpg" alt="Pediatría">
+                        <h3>Pediatría</h3>
+                        <p>Atención integral para niños y adolescentes.</p>
+                    </div>
+                    <div class="servicio-card">
+                        <img src="img/traumatologia.jpg" alt="Traumatología">
+                        <h3>Traumatología</h3>
+                        <p>Diagnóstico y tratamiento de lesiones del sistema músculo-esquelético.</p>
+                    </div>
+                </div>
+                <!-- Video institucional -->
+                <div class="video-container">
+                    <h3>Conoce nuestras instalaciones</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Video institucional" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <video src="img/video-institucional.mp4" controls></video> -->
+                </div>
+            </section>
+        </article>
+    </main>
+    <aside class="aside"> <!-- aside (seccion lateral)-->
+            <nav class="navegacioAside">
+                <ul class="nav__aside">
+                    <li class="aside__item"><a href="#nosotros" class="aside__link">Nosotros</a></li>
+                    <li class="aside__item"><a href="#servicios" class="aside__link">Servicio</a></li>
+                </ul>
+            </nav>
+    </aside>
+        
+    <footer class="site-footer"> <!-- footer (seccion final)-->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Ygefrontida</h3>
+                <p class="footer-text">Servicio para todos.</p>
+                <p class="footer-text"><i class="fas fa-map-marker-alt"></i> Av. Bolivar, Carabobo, Venezuela</p>
+                <p class="footer-text"><i class="fas fa-phone"></i> +58 412-8872651</p>
+                <p class="footer-text"><i class="fas fa-envelope"></i> contacto@ygefrontida.com</p>
+                <div class="footer-social">
+                    <a href="https://youtube.com/javierAQF" target="_blank" class="footer-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="https://GitHub.com/J-AQF" target="_blank" class="footer-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Enlaces</h4>
+                <ul class="footer-links">
+                    <li><a class="active" href="index.html">Inicio</a></li>
+                    <li><a href="consulta.html">Consulta</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 HygiaFrontis/Ygefrontida - Proyecto universitario</p>
+        </div>
+    </footer>
+</body>
+</html>

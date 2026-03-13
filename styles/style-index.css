@@ -1,0 +1,220 @@
+/*Seccion especifica del index*/
+
+/*contenedor pricipal, el unico con aside*/
+body.container {
+    min-height: 100vh; /*altura minima*/
+    margin: 0; /*separacion exterNA de la caja*/
+    display: grid; /*habilita la regilla*/
+    grid-template-columns: 1fr 300px; /*define columnas  (1 fracion de 300 pixels*/
+    grid-template-rows: auto 1fr auto; /*define filas*/
+    grid-template-areas: /*Establece las areas*/
+        "header header"
+        "main aside"
+        "footer footer";
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+
+.aside {
+    /* Imagen de fondo */
+    background-image: url('../img/asideMosaico.png');
+    background-size: cover;        /* La imagen cubre todo el contenedor */
+    background-position: center;   /* Centrada */
+    background-repeat: no-repeat; /*evira la repetecion*/
+    /* Para que el contenido se vea bien sobre la imagen */
+    background-color: rgba(104, 16, 244, 0.3); /* Color morado semitransparente */
+    background-blend-mode: overlay; /* Mezcla el color con la imagen */
+    /* Altura mínima para que la imagen tenga espacio */
+    min-height: 500px; /* para ajustar*/
+    /* ocupa toda la altura disponible en la celda del grid */
+    height: 100%;
+}
+/* Estilos para el menú dentro del aside */
+.navegacioAside {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para legibilidad */
+    padding: 20px; /*margen dentro de la caja*/
+    border-radius: 10px; /*bordes de la caja redondeado*/
+    margin: 20px; /*margen externo de la caja*/
+    position: sticky; /*hace que se mueva con el scroll*/
+    top: 20px; /*le pone un limte al sticky (necesario para que funcione)*/
+    max-width: calc(100% - 40px); /*toma el maximo del ancho disponible y le resta 40 pixeles*/
+}
+.navegacioAside ul {
+    list-style: none; /*quita el estilo de la tista es decir los puntos */
+    padding: 0; /*sin margen interno*/
+    margin: 0; /*sin margen externo*/
+}
+.navegacioAside li {
+    margin: 10px 0; /*le agrega un margen externo a la lissta arriba y abojo, pero no a los lados*/
+}
+.navegacioAside a {
+    display: block; /*hace que el elmeto funcione como un bloque, toma todo el espacio disponible en su cotenedor pádre*/
+    padding: 10px 15px; /*le agrega una margen interno arriba y abjo de 10 pixeles, y a los lado de 15 pixles*/
+    background-color: var(--color-complementario);
+    color: white;
+    text-decoration: none; /*quita la decoracion de los links (subrayado)*/
+    font-weight: bold; /*hace las letras en negritas*/
+    border-radius: 5px; /*redonde en los bordes*/
+    transition: background 0.3s; /*transicion del fondo*/
+}
+.navegacioAside a:hover { /*produce un cambio cuando pasas el mause*/
+    background-color: var(--color-cpmplemento); /*cambia el color del fondo*/
+}
+html,body{
+    scroll-behavior: smooth; /*provoco que el movimiento entre secciones sea suave*/
+}
+
+
+
+
+
+/*Informacion*/
+.titulos-secundarios{
+    font-size: 50px; /*tamaño de la fuente*/
+    padding: 0 0 0 30px; /*espacio interno (solo el de la izquierda)*/
+    border-bottom: 3px solid var(--color-medio);
+    border-radius: 20px; /*bordes redondeado*/
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.info{
+    padding: 0px; /*sin margen interno*/
+    margin: 100px 10px; /*margen externo*/
+}
+
+
+
+/* seccion de nosotros usando "flex" */
+.nosotros-flex {
+    display: flex; /*a diferecia de grid trabajo solo en una direccion filas o columns*/
+    align-items: center; /*alinea los items en el centro*/
+    gap: 40px; /*espacio entre secciones*/
+    margin: 60px 20px;
+    background: rgba(255,255,255,0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.nosotros-texto {
+    flex: 1; /*estíra para ocupar todo el espacio sobrante que haya, o encóge si no cabe, pero siempre en proporción con los hermanos que también tengan flex: 1;*/
+}
+
+.nosotros-texto p {
+    font-size: 1.1rem; /*tamaño de fuente*/
+    line-height: 1.6; /*altura entre lineas*/
+    color: #333;
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    width: 100%; /*toma el tamaño maximo de tu contenedor*/
+    border-radius: 15px; 
+    box-shadow: 0 5px 15px rgba(104,16,244,0.3); /*sombra de la caja*/
+    transition: transform 0.3s;
+}
+
+.nosotros-imagen img:hover {
+    transform: scale(1.02); /*aumenta el tamaño al pasar el mouse por arriba*/
+}
+
+/* ===== SECCIÓN SERVICIOS GRID ===== */
+.servicios {
+    margin: 60px 20px;
+}
+
+.servicios-grid {
+    display: grid; /*habilita las rejillas (columnas y filas)*/
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /*Crea tantas columnas como quepan en una fila, que tengan un ancho mínimo de 280 píxeles y un ancho máximo de 1 fracción del espacio restante (1fr), y si alguna columna sobra o falta, ajústa automáticamente."*/
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.servicio-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden; /*recortar o ocultar cualquier contenido que se salga de la caja de un elemento.*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding-bottom: 15px; /*espacio interni de la caja, solo la parte de abajo*/
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px); /*se mueve en el eje y*/
+    box-shadow: 0 15px 30px rgba(104,16,244,0.2);
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /*la propiedad que define cómo un elemento reemplazado (como <img>, <video> o <iframe>) debe redimensionarse para encajar en su contenedor.*/
+    border-bottom: 3px solid var(--color-complementario);
+}
+
+.servicio-card h3 {
+    font-size: 1.3rem;
+    margin: 15px 15px 10px;
+    color: var(--color-complementario);
+    font-family: var(--fuente-titulos);
+}
+
+.servicio-card p {
+    font-size: 0.95rem;
+    margin: 0 15px 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Video */
+.video-container {
+    text-align: center; /*alinea el texto en el centro*/
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(104,16,244,0.05);
+    border-radius: 20px;
+}
+
+.video-container h3 {
+    font-size: 1.8rem;
+    color: var(--color-complementario);
+    margin-bottom: 20px;
+}
+
+.video-container iframe,
+.video-container video {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* MEDIA QUERY PARA MÓVIL */
+@media (max-width: 768px) {
+    .nosotros-flex {
+        flex-direction: column; /*Pone los elementos hijos uno debajo del otro (en columna) dentro de un contenedor flex.*/
+        text-align: center;
+    }
+    
+    .servicios-grid {
+        grid-template-columns: 1fr; /*Crea una rejilla con 1 columna que ocupa toda la fracción disponible del espacio*/
+    }
+}
+
+.aside {
+    max-width: 100%;
+}

@@ -1,0 +1,36 @@
+/*seccion de css de grid area sin aside*/
+
+/*Variables globales*/
+:root{
+    --color-bg: #f0eff3;
+    --color-complementario: #6810F4  ;
+    --color-cpmplemento: #8F63CE;
+    --color-medio: #ABB1CB;
+    --color-primario: #C1D5DB;
+    --secundary-color: #C8E6DB;
+    --extra-color: midnightblue;
+    --color-complementoLigero: #9d6ce14a;
+    --fuente-titulos: 'GermanicaPlain', cursive;
+    --font-main: 'Artifika', serif;
+}
+
+body.container-especial {
+    min-height: 100vh; /*altura minima*/
+    margin: 0; /*margen esterno de la caja*/
+    display: grid; /*abilitar regilla*/
+    grid-template-areas: /*Orden de las areas*/
+        "header"
+        "main"
+        "footer";
+}
+
+header{ 
+    grid-area: header; /*establece la seccion en su sitio*/
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+

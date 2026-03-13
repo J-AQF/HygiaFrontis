@@ -1,0 +1,87 @@
+[
+    {
+        "id" : 1,
+        "nombre": "Dr. José María Vargas",
+        "especialidad": "Medicina General",
+        "correo": "Medicinageneral@frontis.com",
+        "telefono" : "1-000-000-0000",
+        "departamento": "Medicina General",
+        "horario": {
+            "dias" : "Lun - Vie",
+            "horas": "6:00 a 5:00"
+        },
+        "consultorio": "101",
+        "foto": "img/fotomedico-1.png"
+    },
+    {
+        "id" : 1,
+        "nombre": "Dr. José Gregorio Hernández",
+        "especialidad": "Pediatría",
+        "correo": "Pediatria@frontis.com",
+        "telefono" : "2-000-0000-0000",
+        "departamento": "Cuidados Infatiles",
+        "horario": {
+            "dias" : "Lun a Sab",
+            "horas": "8:00 a 9:00"
+        },
+        "consultorio": "103",
+        "foto": "img/fotomedico-2.png"
+    },
+    {
+        "id" : 3,
+        "nombre": "Dr. Luis Razetti",
+        "especialidad": "Obstetricia",
+        "correo": "Obstetra@frontis.com",
+        "telefono" : "3-000-000-0000",
+        "departamento": "Obstetricia",
+        "horario": {
+            "dias" : "Lun a Vie",
+            "horas": "8:00 a 4:00"
+        },
+        "consultorio": "106",
+        "foto": "img/fotomedico-3.png"
+    },
+    {
+        "id" : 4,
+        "nombre": "Dr. Jacinto Convit",
+        "especialidad": "Darmatologia",
+        "correo": "Darmatologo@frontis.com",
+        "telefono" : "4-000-000-0000",
+        "departamento": "Darmatologico",
+        "horario": {
+            "dias" : "Lun a Vie",
+            "horas": ""
+        },
+        "consultorio": "110",
+        "foto": "img/fotomedico-4"
+    },
+    {
+        "id" : 5,
+        "nombre": "Dr. Humberto Fernández Morán",
+        "especialidad": "Neurocirugía",
+        "correo": "Neuro@frontis.com",
+        "telefono" : "5-000-000-0000",
+        "departamento": "Neurocirujia central",
+        "horario": {
+            "dias" :  "Jue a Dom",
+            "horas": "10:00 a 8:00"
+        },
+        "consultorio": "134",
+        "foto": "img/fotomedico-5"
+    },
+    {
+        "id" : 6,
+        "nombre": "Dr. Heberto Cuenca",
+        "especialidad": "Cardioligia",
+        "correo": "tucumtucum@frontis.com",
+        "telefono" : "6-000-000-0000",
+        "departamento": "Cardilogico central",
+        "horario": {
+            "dias" : "Lun a Sab",
+            "horas": "6:00 a 5:00"
+        },
+        "consultorio": "121",
+        "foto": "img/fotomedico-6"
+    }
+
+]

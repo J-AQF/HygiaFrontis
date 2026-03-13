@@ -1,0 +1,155 @@
+:root{
+    --color-bg: #f0eff3;
+    --color-complementario: #6810F4  ;
+    --color-cpmplemento: #8F63CE;
+    --color-medio: #ABB1CB;
+    --color-primario: #C1D5DB;
+    --secundary-color: #C8E6DB;
+    --extra-color: midnightblue;
+    --color-complementoLigero: #9d6ce14a;
+    --fuente-titulos: 'GermanicaPlain', cursive;
+    --font-main: 'Artifika', serif;
+}
+
+/*  TARJETAS DE ESPECIALISTAS  */
+
+.personal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 380px; /* un poco más alta */
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--color-complementario);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(104,16,244,0.3);
+}
+
+.card-imagen {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc; /* color de respaldo */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.card:hover .card-imagen {
+    transform: scale(1.2); /* reducido de 1.5 a 1.2 */
+    filter: brightness(0.6);
+}
+
+.card-text {
+    position: absolute;
+    top: 0;
+    left: -100%; /* oculto */
+    width: 80%; /* más ancho que antes (60%) */
+    height: 100%;
+    background: rgba(104, 16, 244, 0.9); /* un poco más opaco */
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* rebote suave */
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+
+.card:hover .card-text {
+    left: 0;
+}
+
+.card-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-family: var(--fuente-titulos);
+    line-height: 1.2;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    padding-bottom: 8px;
+}
+
+.card-text p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    font-family: var(--font-main);
+    opacity: 0.9;
+}
+
+.card-text p:first-of-type {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-primario);
+}
+
+.card-text a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: white;
+    color: var(--color-complementario);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.card-text a:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+    transform: scale(1.05);
+}
+
+/* Responsive: en móvil, el panel aparece siempre */
+@media (max-width: 768px) {
+    .personal {
+        gap: 20px;
+    }
+    .card {
+        height: 350px;
+    }
+    .card-text {
+        width: 90%; /* más ancho en móvil */
+        padding: 15px;
+    }
+    .card-text h2 {
+        font-size: 1.5rem;
+    }
+    .card-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-text {
+        width: 100%; /* ocupa todo el ancho */
+        left: 0; /* visible siempre */
+    }
+    .card:hover .card-text {
+        left: 0; /* mantiene el hover */
+    }
+
+    .card .card-text {
+        left: 0;
+        width: 100%;
+        background: rgba(104,16,244,0.8);
+    }
+    .card .card-imagen {
+        filter: brightness(0.6);
+    }
+}

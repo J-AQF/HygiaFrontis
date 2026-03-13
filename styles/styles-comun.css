@@ -1,0 +1,419 @@
+:root{
+    --color-bg: #f0eff3;
+    --color-complementario: #6810F4  ;
+    --color-cpmplemento: #8F63CE;
+    --color-medio: #ABB1CB;
+    --color-primario: #C1D5DB;
+    --secundary-color: #C8E6DB;
+    --extra-color: midnightblue;
+    --color-complementoLigero: #9d6ce14a;
+    --fuente-titulos: 'GermanicaPlain', cursive;
+    --font-main: 'Artifika', serif;
+}
+
+/*Fuentes*/
+@font-face {
+    font-family: 'GermanicaPlain'; /*nombre de la fuente y la  usarla*/
+    src: url('../fonts/Plain Germanica.ttf') format('truetype'); /*importa la fuente con su formato*/
+    font-weight: normal; /*configuracion de la fuente*/
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GermanicaFluted';
+    src: url('../fonts/Fluted Germanica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GermanicaEmbossed';
+    src: url('../fonts/Embossed Germanica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GermanicaShadowed';
+    src: url('../fonts/Shadowed Germanica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e3e3e3;
+    font-family: var(--font-main);
+
+    height: 100%;
+    min-height: 100vh;
+}
+
+
+body.container,
+body.container-especial {
+    min-height: 100vh;
+    height: 100%; 
+
+}
+
+
+.card {
+    max-height: 350px; 
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main{
+    border: 2px solid var(--color-cpmplemento);
+}
+
+.header{
+    background-image: url('../img/headerMosaico.png'); /*Imagen. mosaico con degradado de blanco a morado (usandolo los colores establecidos) en el centro cuenta con una cruz tambien hecha con mosaicos*/
+    background-position: center; /* Centrada */
+    background-repeat: no-repeat; /*evira la repetecion*/
+    background-size: cover;  /* La imagen cubre todo el contenedor */  
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 30px; /*margen dentro de la caja*/
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.site-footer{
+    background-image: url('../img/footerMosaico.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 30px 0; /*margen dentro de la caja*/
+    text-align: center;
+    margin: auto;/* margen externo*/
+
+}
+
+.navegacionS{
+    background-color: #6810F4;
+}
+
+
+/*Navegacion*/
+.navegacion__item, .navegacion__link{
+    display: inline-block;
+}
+.navegacion{
+    padding: 0;
+    position: relative; /*sirve para mover un elemento respecto a su posición original y, sobre todo, para convertirse en el punto de referencia de los elementos hijos que tengan position: absolute.*/
+    background-color: var(--color-complementoLigero);
+}
+.navegacion__list {
+    display: flex;
+    flex-wrap: wrap; /*controla si los elementos hijos deben ajustarse a la siguiente línea cuando no hay suficiente espacio horizontal (o vertical) en el contenedor*/
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    margin: 0;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.navegacion__item {
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+.navegacion__link {
+    text-decoration: none;  /*quita el estilo de la tista es decir los puntos */
+    font-size: 1.6em;
+    padding: 6px 9px;
+    color: var(--color-bg);
+    transition: all 0.3s ease;
+    white-space: nowrap;  /*sirve para evitar que el texto se divida en varias líneas, obligándolo a permanecer en una sola línea, incluso si se desborda de su contenedor.*/
+}
+.navegacion__item:hover{
+    background-color: var(--color-cpmplemento);
+    
+}
+.navegacion__link:hover{
+    transform: scale(1.1);
+}
+
+
+/*Titulos*/
+.titulo__principal{
+    font-size: 5.5rem;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    font-family:  var(--fuente-titulos);
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
+
+/*footer*/
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    text-align: left;
+}
+.footer-text, .footer-title{
+    text-align: left;
+    padding: 0 10px;
+    margin: 0;
+}
+.footer-title{
+    font-size: 4em;
+    font-family: var(--fuente-titulos);
+    color: var(--color-medio);
+    text-decoration: underline;
+}
+
+.footer-text{
+    font-size: 1.3em;
+    color: var(--color-medio);
+}
+.footer-subtitle {
+    color: var(--color-primario);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 5px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: var(--color-medio);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block; /*inline: Los elementos se colocan en la misma línea (como palabras).
+
+    block: Los elementos ocupan todo el ancho y respetan dimensiones.
+    
+    inline-block: Híbrido: fluyen en línea pero se pueden dimensionar.*/
+}
+
+.footer-links a:hover {
+    color: var(--extra-color);
+    transform: translateX(5px);
+}
+.footer-icon {
+    display: inline-flex; /* crea un contenedor flex que se comporta como un elemento en línea (inline) hacia afuera, pero mantiene el comportamiento flex hacia adentro con sus hijos.*/
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-bg);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-icon:hover {
+    background-color: var(--color-bg);
+    color: var(--color-dark);
+    transform: translateY(-3px);
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-bg);
+    font-size: 0.9rem;
+}
+
+.footer-link:hover,
+.active {
+    color: var(--color-cpmplemento);
+    border-bottom: 1px solid var(--color-cpmplemento);
+}
+
+.f-icon{
+    color: var(--color-bg);
+}
+
+.f-text{
+    text-align: center;
+    display: inline;
+}
+
+/*  MEDIA QUERIES GLOBALES  */
+
+/* Tablets y móviles grandes */
+
+@media (max-width: 992px) {
+    .titulo__principal {
+        font-size: 4rem;
+    }
+    .titulos-secundarios {
+        font-size: 2.5rem;
+        padding-left: 15px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    /* Navegación: se apila */
+    .navegacion__list {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .navegacion__item {
+        width: 100%;
+        text-align: center;
+    }
+    .navegacion__link {
+        font-size: 1.3rem;
+        display: block;
+        padding: 12px;
+    }
+
+    /* Títulos */
+    .titulo__principal {
+        font-size: 2.8rem;
+        padding: 15px 0;
+    }
+    .titulos-secundarios {
+        font-size: 2rem;
+    }
+
+    /* Index: grid a una columna */
+    body.container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+    }
+    .aside {
+        min-height: auto;
+        position: static;
+        height: auto;
+    }
+    .navegacioAside {
+        position: static;
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+
+    /* Sección nosotros flex se apila */
+    .nosotros-flex {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Servicios grid: 1 columna */
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Especialidades: ajustes de cards */
+    .personal {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .card {
+        height: 300px; /* un poco más pequeña */
+    }
+    .card-text {
+        width: 80%; /* más ancho en móvil */
+        padding: 15px;
+    }
+    .card-text h2 {
+        font-size: 1.2rem;
+    }
+    .card-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Formulario de citas */
+    .cita-container {
+        padding: 10px;
+    }
+    form {
+        max-width: 100%;
+        padding: 15px;
+        box-shadow: 0px 0px 20px var(--extra-color);
+    }
+    .form-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn-submit, .btn-reset, .btn-actualizar {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-section {
+        text-align: center;
+    }
+    .footer-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .footer-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .footer-social {
+        justify-content: center;
+    }
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+    .titulo__principal {
+        font-size: 2rem;
+    }
+    .titulos-secundarios {
+        font-size: 1.5rem;
+    }
+    .card {
+        height: 280px;
+    }
+    .card-text {
+        width: 100%; /* ocupa todo el ancho */
+        padding: 10px;
+    }
+}
+
+
+/*bueno... esto sorprdentemente funciona esta vez carlos, no toques nada*/
