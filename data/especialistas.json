@@ -50,10 +50,10 @@
         "departamento": "Darmatologico",
         "horario": {
             "dias" : "Lun a Vie",
-            "horas": ""
+            "horas": "8:00 a 5:00"
         },
         "consultorio": "110",
-        "foto": "img/fotomedico-4"
+        "foto": "img/fotomedico-4.png"
     },
     {
         "id" : 5,
@@ -67,7 +67,7 @@
             "horas": "10:00 a 8:00"
         },
         "consultorio": "134",
-        "foto": "img/fotomedico-5"
+        "foto": "img/fotomedico-5.jpg"
     },
     {
         "id" : 6,
@@ -81,7 +81,7 @@
             "horas": "6:00 a 5:00"
         },
         "consultorio": "121",
-        "foto": "img/fotomedico-6"
+        "foto": "img/fotomedico-6.jpg"
     }
 
 ]
